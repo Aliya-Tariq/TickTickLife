@@ -21,7 +21,7 @@ export default function HeroSection({ onGetStarted, isReturningUser = false }: H
           title="Built with Bolt.new"
         >
           <img
-            src="/bolt-badge.png"
+            src="src/components/bolt-badge.png"
             alt="Bolt.new"
             className="w-8 h-8 md:w-10 md:h-10 hover:scale-110 transition-transform" 
           />
@@ -34,7 +34,7 @@ export default function HeroSection({ onGetStarted, isReturningUser = false }: H
           title="Database by Supabase"
         >
           <img
-            src="/supabase.png"
+            src="src/components/supabase.png"
             alt="Supabase"
             className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform" 
           />
