@@ -3,9 +3,9 @@
 <div align="center">
 
 
-**🚨 WAKE UP CALL: What if I told you that you're unconsciously giving away **3–5 years of your precious life** to mindless scrolling, binge-watching, and other time-wasting habits? **
+**🚨 WAKE UP CALL: What if I told you that you're unconsciously giving away 3–5 years of your precious life to mindless scrolling, binge-watching, and other time-wasting habits? **
 
-*What if I told you that you're unconsciously giving away 3-5 years of your precious life to scrolling, binge-watching, and other time-wasting habits? What if you could reclaim that time and live more consciously?*
+
 
 [![Live Demo](https://img.shields.io/badge/🌟_Live_Demo-Try_Now-18C3B9?style=for-the-badge)](https://effortless-dragon-41a868.netlify.app/)
 [![GitHub Stars](https://img.shields.io/github/stars/Aliya-Tariq/tickticklife?style=for-the-badge&color=FFD369)](https://github.com/Aliya-Tariq/TickTickLife)
