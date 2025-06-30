@@ -304,45 +304,7 @@ export default function LoginPage() {
           </div>
         </motion.div>
       </div>
-       {/* ✅ Fixed floating badge */}
-      <div className="fixed bottom-4 left-4 z-50 flex items-center space-x-3 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
-        <a
-          href="https://bolt.new"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Built with Bolt.new"
-        >
-          <img
-            src="src/components/bolt-badge.png"
-            alt="Bolt.new"
-            className="w-8 h-8 md:w-10 md:h-10 hover:scale-110 transition-transform"
-          />
-        </a>
-        <a
-          href="https://supabase.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Database by Supabase"
-        >
-          <img
-            src="src/components/supabase.png"
-            alt="Supabase"
-            className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform"
-          />
-        </a>
-        <a
-          href="https://www.netlify.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Hosted on Netlify"
-        >
-          <img
-            src="src/components/netlify.svg"
-            alt="Netlify"
-            className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform"
-          />
-        </a>
-      </div>
+      
     </div>
   );
 }
