@@ -14,6 +14,8 @@ export default function HeroSection({ onGetStarted, isReturningUser = false }: H
          {/* Badges - Bottom Left Corner */}
      
 <div className="fixed bottom-4 left-4 z-50 flex items-center space-x-3 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+
+  {/*for bolt*/}
     <a
       href="https://bolt.new"
       target="_blank"
@@ -25,7 +27,7 @@ export default function HeroSection({ onGetStarted, isReturningUser = false }: H
         alt="Bolt.new"
         className="w-8 h-8 md:w-10 md:h-10 hover:scale-110 transition-transform" />
     </a>
-  
+   {/*for supabase*/}
     <a
       href="https://supabase.com"
       target="_blank"
@@ -37,7 +39,7 @@ export default function HeroSection({ onGetStarted, isReturningUser = false }: H
         alt="Supabase"
         className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform" />
     </a>
-  
+  {/*for netlify*/}
     <a
       href="https://www.netlify.com/"
       target="_blank"
