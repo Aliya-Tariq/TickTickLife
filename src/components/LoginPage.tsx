@@ -87,7 +87,7 @@ export default function LoginPage() {
           title="Built with Bolt.new"
         >
           <img
-            src="src/components/bolt-badge.png"
+            src="/bolt-badge.png"
             alt="Bolt.new"
             className="w-8 h-8 md:w-10 md:h-10 hover:scale-110 transition-transform"
           />
