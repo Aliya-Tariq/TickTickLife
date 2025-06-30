@@ -167,8 +167,24 @@ npm run dev
 | 📤 **Reflection** | Your transformation summary | 🎉 Empowerment |
 
 </div>
+---
+
+
+
+### WHAT'S NEXT?
+- [ ] Weekly **"Time Check"** reminders
+- [ ] Sync with **Google Health / Apple Health** for passive habit tracking
+- [ ] Mobile app for iOS/Android with push notifications
+- [ ] **Global impact tracker** — see collective time saved by all users
+- [ ] **Community features** — connect with other time warriors
+- [ ] **Leaderboards** — yes, it’s morbid, but gamified time stats might just work
+- [ ] **Dark mode** — because time... is dark 🌑
+
+
 
 ---
+
+
 
 <div align="center">
 
@@ -193,17 +209,6 @@ npm run dev
 
 </div>
 
----
-
-
-### WHAT'S NEXT?
-- [ ] Weekly **"Time Check"** reminders
-- [ ] Sync with **Google Health / Apple Health** for passive habit tracking
-- [ ] Mobile app for iOS/Android with push notifications
-- [ ] **Global impact tracker** — see collective time saved by all users
-- [ ] **Community features** — connect with other time warriors
-- [ ] **Leaderboards** — yes, it’s morbid, but gamified time stats might just work
-- [ ] **Dark mode** — because time... is dark 🌑
 
 ---
 
