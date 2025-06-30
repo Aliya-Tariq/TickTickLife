@@ -218,7 +218,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-*Made with ❤️ and ⏰ by the TickTickLife Team*
-
+*Made with ❤️ and ⏰ in 48 hours by a sleep-deprived developer who refused to give up*
 
 </div>
