@@ -49,7 +49,7 @@ TickTickLife isn't just another productivity app. It's a **life awareness revolu
 
 ---
 
-## 🚀 Why TickTickLife Will Change Your Life
+##  Why TickTickLife Will Change Your Life
 
 ### 😱 The Shock Factor
 - **Real-time countdown** of your remaining life seconds
@@ -77,23 +77,23 @@ TickTickLife isn't just another productivity app. It's a **life awareness revolu
 <td width="50%">
 
 ### 🔥 Core Features
-- ⏰ **Life Clock Calculator** - Real-time countdown
-- 📊 **Habit Analyzer** - Deep dive into time usage
-- 🧠 **Consciousness Meter** - See your "awake" time
-- 🎯 **Goal Wizard** - Create meaningful objectives
-- 🔮 **What-If Simulator** - Test habit changes
-- 📤 **Summary Report** - Downloadable insights
+-  **Life Clock Calculator** - Real-time countdown
+-  **Habit Analyzer** - Deep dive into time usage
+-  **Consciousness Meter** - See your "awake" time
+-  **Goal Wizard** - Create meaningful objectives
+-  **What-If Simulator** - Test habit changes
+-  **Summary Report** - Downloadable insights
 
 </td>
 <td width="50%">
 
 ### 🎨 Experience Features
-- 🌙 **Dark/Light Mode** - Beautiful themes
-- 📱 **Mobile Responsive** - Works everywhere
-- 🎮 **Gamification** - Badges and achievements
-- 📊 **Data Visualization** - Stunning charts
-- 🤖 **AI Insights** - Personalized tips
-- 📤 **Social Sharing** - Inspire others
+-  **Dark/Light Mode** - Beautiful themes
+-  **Mobile Responsive** - Works everywhere
+-  **Gamification** - Badges and achievements
+-  **Data Visualization** - Stunning charts
+-  **AI Insights** - Personalized tips
+-  **Social Sharing** - Inspire others
 
 </td>
 </tr>
@@ -143,7 +143,7 @@ npm install
 npm run dev
 ```
 
-**🌟 Open http://localhost:5173 and prepare to be shocked by your time reality!**
+
 
 ---
 
@@ -164,34 +164,6 @@ npm run dev
 
 </div>
 
----
-
-## 🌟 Real User Transformations
-
-> *"I discovered I was losing 3.2 years to mindless scrolling. TickTickLife helped me reclaim that time and I've never felt more alive!"* - Sarah, 28
-
-> *"This app gave me the wake-up call I needed. I've optimized my habits and gained back 4 years of conscious living time."* - Mike, 35
-
-> *"The visual impact of seeing my life countdown was terrifying but necessary. Now I live every day with intention."* - Emma, 42
-
----
-
-## 🤝 Join the Time Awareness Revolution
-
-### 🌍 Spread the Awareness
-- ⭐ **Star this repo** to support the mission
-- 🔄 **Share your results** on social media
-- 💬 **Tell friends** about their time reality
-- 🤝 **Contribute** to make it even better
-
-### 🛠️ Contributing
-We welcome contributions! Whether it's:
-- 🐛 Bug fixes
-- ✨ New features
-- 📝 Documentation improvements
-- 🎨 Design enhancements
-
-Check out our [Contributing Guide](CONTRIBUTING.md) to get started.
 
 ---
 
@@ -199,30 +171,26 @@ Check out our [Contributing Guide](CONTRIBUTING.md) to get started.
 
 <div align="center">
 
-![GitHub repo size](https://img.shields.io/github/repo-size/yourusername/tickticklife?style=for-the-badge&color=FF6B6B)
-![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/tickticklife?style=for-the-badge&color=4CAF50)
-![GitHub issues](https://img.shields.io/github/issues/yourusername/tickticklife?style=for-the-badge&color=FFD369)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/yourusername/tickticklife?style=for-the-badge&color=18C3B9)
+![GitHub repo size](https://img.shields.io/github/repo-size/Aliya-Tariq/tickticklife?style=for-the-badge&color=FF6B6B)
+![GitHub last commit](https://img.shields.io/github/last-commit/Aliya-Tariq/tickticklife?style=for-the-badge&color=4CAF50)
+![GitHub issues](https://img.shields.io/github/issues/Aliya-Tariq/tickticklife?style=for-the-badge&color=FFD369)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Aliya-Tariq/tickticklife?style=for-the-badge&color=18C3B9)
 
 </div>
 
 ---
 
-## 🎯 Roadmap - The Future of Time Awareness
 
-### 🚀 Coming Soon
-- [ ] 🤖 **AI Life Coach** - Personalized habit recommendations
-- [ ] 📱 **Mobile App** - Native iOS/Android experience
-- [ ] 👥 **Community Features** - Connect with other time warriors
-- [ ] 📈 **Advanced Analytics** - Deeper insights and trends
-- [ ] 🏆 **Challenges** - Gamified habit improvement
-- [ ] 🔗 **Integrations** - Connect with fitness trackers and calendars
 
-### 💡 Dream Features
-- [ ] 🧬 **Biometric Integration** - Real health impact calculations
-- [ ] 🌍 **Global Impact** - See collective time saved by all users
-- [ ] 🎓 **Educational Content** - Time management masterclasses
-- [ ] 🏢 **Enterprise Version** - Help companies optimize employee time
+
+### WHAT'S NEXT?
+- [ ] Weekly **"Time Check"** reminders
+- [ ] Sync with **Google Health / Apple Health** for passive habit tracking
+- [ ] Mobile app for iOS/Android with push notifications
+- [ ] **Global impact tracker** — see collective time saved by all users
+- [ ] **Community features** — connect with other time warriors
+- [ ] **Leaderboards** — yes, it’s morbid, but gamified time stats might just work
+- [ ] **Dark mode** — because time... is dark 🌑
 
 ---
 
@@ -236,25 +204,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Designed for** everyone who wants to live more consciously
 - **Dedicated to** all the time warriors fighting against mindless habits
 
----
 
-## 💌 Connect & Support
 
-<div align="center">
 
-### 🌟 Love TickTickLife? Show Your Support!
 
-[![GitHub Stars](https://img.shields.io/badge/⭐_Star_on_GitHub-Support_the_Mission-FFD369?style=for-the-badge)](https://github.com/yourusername/tickticklife)
-[![Twitter Follow](https://img.shields.io/badge/🐦_Follow_on_Twitter-Stay_Updated-1DA1F2?style=for-the-badge)](https://twitter.com/tickticklife)
-[![Buy Me A Coffee](https://img.shields.io/badge/☕_Buy_Me_A_Coffee-Support_Development-FF813F?style=for-the-badge)](https://buymeacoffee.com/tickticklife)
 
-### 📬 Get in Touch
-- 💌 **Email**: hello@tickticklife.com
-- 🐦 **Twitter**: [@TickTickLife](https://twitter.com/tickticklife)
-- 💼 **LinkedIn**: [TickTickLife](https://linkedin.com/company/tickticklife)
-- 🌐 **Website**: [tickticklife.com](https://tickticklife.com)
 
-</div>
 
 ---
 
@@ -266,12 +221,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 *Every second you delay is a second you'll never get back. The question isn't whether you have time to use TickTickLife—it's whether you have time NOT to.*
 
-[![Start Your Journey](https://img.shields.io/badge/🚀_START_YOUR_JOURNEY-Transform_Your_Life_Now-FF6B6B?style=for-the-badge&logo=rocket)](https://tickticklife.netlify.app)
+[![Start Your Journey](https://img.shields.io/badge/🚀_START_YOUR_JOURNEY-Transform_Your_Life_Now-FF6B6B?style=for-the-badge&logo=rocket)](https://effortless-dragon-41a868.netlify.app/)
 
 ---
 
 *Made with ❤️ and ⏰ by the TickTickLife Team*
 
-**Remember: Time is the only currency that matters. Spend it wisely.**
 
 </div>
