@@ -99,7 +99,7 @@ export default function LoginPage() {
           title="Database by Supabase"
         >
           <img
-            src="src/components/supabase.png"
+            src="/supabase.png"
             alt="Supabase"
             className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform"
           />
