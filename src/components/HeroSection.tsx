@@ -108,23 +108,7 @@ export default function HeroSection({ onGetStarted, isReturningUser = false }: H
             </div>
           </div>
 
-          {isReturningUser && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 max-w-2xl mx-auto"
-            >
-              <div className="text-3xl mb-3">🎯</div>
-              <h3 className="font-outfit font-bold text-xl text-white mb-2">
-                Your Journey Continues
-              </h3>
-              <p className="font-dm-sans text-white/90">
-                You've already taken the first step towards conscious living. 
-                Access all your tools and insights through the navigation menu above.
-              </p>
-            </motion.div>
-          )}
+         
         </motion.div>
       </div>
     </section>
