@@ -5,6 +5,10 @@
 
 🚨 WAKE UP CALL: What if I told you that you're unconsciously giving away **3–5 years of your precious life** to mindless scrolling, binge-watching, and other time-wasting habits? 
 
+<br>
+
+<br>
+
 **TickTick Life** is part productivity tool, part psychology experiment, and part wake-up call. It calculates your estimated remaining lifespan—then shows you how much of it you’ll lose to daily habits like scrolling, sleeping, working, and... existing.
 
 [![Live Demo](https://img.shields.io/badge/🌟_Live_Demo-Try_Now-18C3B9?style=for-the-badge)](https://effortless-dragon-41a868.netlify.app/)
