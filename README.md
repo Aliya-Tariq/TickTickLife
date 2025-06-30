@@ -3,7 +3,7 @@
 <div align="center">
 
 
-**🚨 WAKE UP CALL: You're losing years of your life to mindless habits 🚨**
+**🚨 WAKE UP CALL: What if I told you that you're unconsciously giving away **3–5 years of your precious life** to mindless scrolling, binge-watching, and other time-wasting habits? **
 
 *What if I told you that you're unconsciously giving away 3-5 years of your precious life to scrolling, binge-watching, and other time-wasting habits? What if you could reclaim that time and live more consciously?*
 
@@ -181,8 +181,6 @@ npm run dev
 ---
 
 
-
-
 ### WHAT'S NEXT?
 - [ ] Weekly **"Time Check"** reminders
 - [ ] Sync with **Google Health / Apple Health** for passive habit tracking
@@ -194,20 +192,11 @@ npm run dev
 
 ---
 
+
+
 ## 📄 License & Credits
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-### 🙏 Acknowledgments
-- **Inspired by** the philosophy of mindful living and time awareness
-- **Built with** the amazing React and TypeScript ecosystem
-- **Designed for** everyone who wants to live more consciously
-- **Dedicated to** all the time warriors fighting against mindless habits
-
-
-
-
-
 
 
 
@@ -215,7 +204,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-## ⏰ Your Time is NOW
+##  Your Time is NOW
 
 **Stop scrolling. Start living. Your future self is counting on you.**
 
