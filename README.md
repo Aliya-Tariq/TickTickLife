@@ -1,4 +1,4 @@
-#  TickTickLife - Your Time Awareness Revolution
+#                                      TickTickLife 
 
 <div align="center">
 
