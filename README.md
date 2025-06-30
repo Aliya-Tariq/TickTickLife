@@ -167,11 +167,15 @@ npm run dev
 | 📤 **Reflection** | Your transformation summary | 🎉 Empowerment |
 
 </div>
+
+
+
 ---
 
-
+<div align="center">
 
 ### WHAT'S NEXT?
+
 - [ ] Weekly **"Time Check"** reminders
 - [ ] Sync with **Google Health / Apple Health** for passive habit tracking
 - [ ] Mobile app for iOS/Android with push notifications
@@ -181,6 +185,7 @@ npm run dev
 - [ ] **Dark mode** — because time... is dark 🌑
 
 
+</div>
 
 ---
 
@@ -195,6 +200,8 @@ npm run dev
 *Every second you delay is a second you'll never get back. The question isn't whether you have time to use TickTickLife—it's whether you have time NOT to.*
 
 [![Start Your Journey](https://img.shields.io/badge/🚀_START_YOUR_JOURNEY-Transform_Your_Life_Now-FF6B6B?style=for-the-badge&logo=rocket)](https://effortless-dragon-41a868.netlify.app/)
+
+</div>
 
 ---
 
@@ -226,4 +233,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 *Made with ❤️ and ⏰ in 48 hours by a sleep-deprived developer who refused to give up*
 
-</div>
+
