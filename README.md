@@ -168,6 +168,17 @@ npm run dev
 
 </div>
 
+---
+
+<div align="center">
+
+##  Your Time is NOW
+
+**Stop scrolling. Start living. Your future self is counting on you.**
+
+*Every second you delay is a second you'll never get back. The question isn't whether you have time to use TickTickLife—it's whether you have time NOT to.*
+
+[![Start Your Journey](https://img.shields.io/badge/🚀_START_YOUR_JOURNEY-Transform_Your_Life_Now-FF6B6B?style=for-the-badge&logo=rocket)](https://effortless-dragon-41a868.netlify.app/)
 
 ---
 
@@ -204,17 +215,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 
 
----
 
-<div align="center">
-
-##  Your Time is NOW
-
-**Stop scrolling. Start living. Your future self is counting on you.**
-
-*Every second you delay is a second you'll never get back. The question isn't whether you have time to use TickTickLife—it's whether you have time NOT to.*
-
-[![Start Your Journey](https://img.shields.io/badge/🚀_START_YOUR_JOURNEY-Transform_Your_Life_Now-FF6B6B?style=for-the-badge&logo=rocket)](https://effortless-dragon-41a868.netlify.app/)
 
 ---
 
