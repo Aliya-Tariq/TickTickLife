@@ -10,8 +10,8 @@ interface HeroSectionProps {
 export default function HeroSection({ onGetStarted, isReturningUser = false }: HeroSectionProps) {
   return (
     <section className="gradient-hero min-h-[80vh] flex items-center justify-center px-6 py-20">
-         {/* Bolt.new Badge - Bottom Left Corner */}
-    {/* Tech Badge Group - Bottom Left Corner */}
+         {/* Badges - Bottom Left Corner */}
+   
       
 <div className="fixed bottom-4 left-4 z-50 flex items-center space-x-3 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
   <a
