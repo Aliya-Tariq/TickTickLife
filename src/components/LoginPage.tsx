@@ -49,7 +49,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-dark-charcoal via-soft-purple-gray to-dark-charcoal flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-dark-charcoal via-soft-purple-gray to-dark-charcoal flex items-center justify-center p-4 relative">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -76,6 +76,46 @@ export default function LoginPage() {
           }}
           className="absolute bottom-20 right-10 w-40 h-40 bg-digital-teal/10 rounded-full blur-xl"
         />
+      </div>
+
+      {/* Fixed floating badge */}
+      <div className="fixed bottom-4 left-4 z-50 flex items-center space-x-3 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+        <a
+          href="https://bolt.new"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Built with Bolt.new"
+        >
+          <img
+            src="/bolt-badge.png"
+            alt="Bolt.new"
+            className="w-8 h-8 md:w-10 md:h-10 hover:scale-110 transition-transform"
+          />
+        </a>
+        <a
+          href="https://supabase.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Database by Supabase"
+        >
+          <img
+            src="/supabase.png"
+            alt="Supabase"
+            className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform"
+          />
+        </a>
+        <a
+          href="https://www.netlify.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Hosted on Netlify"
+        >
+          <img
+            src="/netlify.svg"
+            alt="Netlify"
+            className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform"
+          />
+        </a>
       </div>
 
       <div className="relative z-10 w-full max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
@@ -303,45 +343,6 @@ export default function LoginPage() {
             </motion.div>
           </div>
         </motion.div>
-      </div>
-       {/* ✅ Fixed floating badge */}
-      <div className="fixed bottom-4 left-4 z-50 flex items-center space-x-3 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
-        <a
-          href="https://bolt.new"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Built with Bolt.new"
-        >
-          <img
-            src="src/components/bolt-badge.png"
-            alt="Bolt.new"
-            className="w-8 h-8 md:w-10 md:h-10 hover:scale-110 transition-transform"
-          />
-        </a>
-        <a
-          href="https://supabase.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Database by Supabase"
-        >
-          <img
-            src="src/components/supabase.png"
-            alt="Supabase"
-            className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform"
-          />
-        </a>
-        <a
-          href="https://www.netlify.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Hosted on Netlify"
-        >
-          <img
-            src="src/components/netlify.svg"
-            alt="Netlify"
-            className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform"
-          />
-        </a>
       </div>
     </div>
   );
