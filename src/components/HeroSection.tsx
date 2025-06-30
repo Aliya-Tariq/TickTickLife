@@ -10,6 +10,19 @@ interface HeroSectionProps {
 export default function HeroSection({ onGetStarted, isReturningUser = false }: HeroSectionProps) {
   return (
     <section className="gradient-hero min-h-[80vh] flex items-center justify-center px-6 py-20">
+      <a
+        href="https://bolt.new"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-4 left-4 z-50"
+        style={{ pointerEvents: 'auto' }}
+      >
+        <img
+          src="src/components/bolt-badge.png"
+          alt="Powered by Bolt.new"
+          className="w-12 h-12 md:w-14 md:h-14 rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+      </a>
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
