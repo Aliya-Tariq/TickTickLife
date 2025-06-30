@@ -47,7 +47,7 @@ export default function HeroSection({ onGetStarted, isReturningUser = false }: H
           title="Hosted on Netlify"
         >
           <img
-            src="/netlify.svg"
+            src="src/components/netlify.svg"
             alt="Netlify"
             className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform"  
           />
