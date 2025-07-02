@@ -3,7 +3,7 @@
 <div align="center">
 
 <br>
-🚨 WAKE UP CALL: What if I told you that you're unconsciously giving away *3–5 years of your precious life* to mindless scrolling, binge-watching, and other time-wasting habits? 
+🚨 WAKE UP CALL: What if I told you that you're unconsciously giving away **3–5 years of your precious life** to mindless scrolling, binge-watching, and other time-wasting habits? 
 
 <br>
 
