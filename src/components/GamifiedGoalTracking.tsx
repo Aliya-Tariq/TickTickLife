@@ -257,67 +257,74 @@ export default function GamifiedGoalTracking({ goals, completedGoals }: Gamified
       const newUnlocked: string[] = [];
 
       badges.forEach(badge => {
-        if (!unlockedBadges.includes(badge.id)) {
-          let shouldUnlock = false;
+        // Skip if already unlocked
+        if (unlockedBadges.includes(badge.id)) {
+          return;
+        }
 
-          switch (badge.type) {
-            case 'goals_created':
-              shouldUnlock = goals.length >= badge.requirement;
-              break;
-            
-            case 'goals_completed':
-              shouldUnlock = completedGoals >= badge.requirement;
-              break;
-            
-            case 'consecutive_days':
-              shouldUnlock = userStats.consecutiveDays >= badge.requirement;
-              break;
-            
-            case 'total_days':
-              shouldUnlock = userStats.totalDays >= badge.requirement;
-              break;
-            
-            case 'category_health':
-              shouldUnlock = getCategoryCompletions('health') >= badge.requirement;
-              break;
-            
-            case 'category_learning':
-              shouldUnlock = getCategoryCompletions('learning') >= badge.requirement;
-              break;
-            
-            case 'category_travel':
-              shouldUnlock = getCategoryCompletions('travel') >= badge.requirement;
-              break;
-            
-            case 'completion_rate_with_volume':
-              shouldUnlock = goals.length >= 50 && getCompletionRate() >= badge.requirement;
-              break;
-            
-            case 'consecutive_months':
-              shouldUnlock = userStats.consecutiveMonths >= badge.requirement;
-              break;
-            
-            case 'shares':
-              shouldUnlock = userStats.shares >= badge.requirement;
-              break;
-            
-            default:
-              shouldUnlock = false;
-          }
+        let shouldUnlock = false;
 
-          if (shouldUnlock) {
-            newUnlocked.push(badge.id);
-          }
+        switch (badge.type) {
+          case 'goals_created':
+            shouldUnlock = goals.length >= badge.requirement;
+            break;
+          
+          case 'goals_completed':
+            shouldUnlock = completedGoals >= badge.requirement;
+            break;
+          
+          case 'consecutive_days':
+            shouldUnlock = userStats.consecutiveDays >= badge.requirement;
+            break;
+          
+          case 'total_days':
+            shouldUnlock = userStats.totalDays >= badge.requirement;
+            break;
+          
+          case 'category_health':
+            shouldUnlock = getCategoryCompletions('health') >= badge.requirement;
+            break;
+          
+          case 'category_learning':
+            shouldUnlock = getCategoryCompletions('learning') >= badge.requirement;
+            break;
+          
+          case 'category_travel':
+            shouldUnlock = getCategoryCompletions('travel') >= badge.requirement;
+            break;
+          
+          case 'completion_rate_with_volume':
+            shouldUnlock = goals.length >= 50 && getCompletionRate() >= badge.requirement;
+            break;
+          
+          case 'consecutive_months':
+            shouldUnlock = userStats.consecutiveMonths >= badge.requirement;
+            break;
+          
+          case 'shares':
+            shouldUnlock = userStats.shares >= badge.requirement;
+            break;
+          
+          default:
+            shouldUnlock = false;
+        }
+
+        if (shouldUnlock) {
+          newUnlocked.push(badge.id);
         }
       });
 
       if (newUnlocked.length > 0) {
-        setUnlockedBadges(prev => [...prev, ...newUnlocked]);
-        // Show notification for the first newly unlocked badge
-        setNewlyUnlockedBadge(newUnlocked[0]);
-        
-        // Clear the notification after 4 seconds
-        setTimeout(() => setNewlyUnlockedBadge(null), 4000);
+        setUnlockedBadges(prev => {
+          const updated = [...prev, ...newUnlocked];
+          // Show notification for the first newly unlocked badge
+          if (newUnlocked.length > 0) {
+            setNewlyUnlockedBadge(newUnlocked[0]);
+            // Clear the notification after 4 seconds
+            setTimeout(() => setNewlyUnlockedBadge(null), 4000);
+          }
+          return updated;
+        });
       }
     };
 
@@ -358,6 +365,9 @@ export default function GamifiedGoalTracking({ goals, completedGoals }: Gamified
         return 0;
     }
   };
+
+  // Calculate actual unlocked badges count
+  const actualUnlockedCount = unlockedBadges.length;
 
   return (
     <div className="space-y-6">
@@ -448,7 +458,7 @@ export default function GamifiedGoalTracking({ goals, completedGoals }: Gamified
       {/* Badges */}
       <div className="space-y-4">
         <h4 className="font-space-grotesk font-semibold text-lg text-snow-white">
-          Achievement Badges ({unlockedBadges.length}/{badges.length})
+          Achievement Badges ({actualUnlockedCount}/{badges.length})
         </h4>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -600,7 +610,7 @@ export default function GamifiedGoalTracking({ goals, completedGoals }: Gamified
           </div>
           <div>
             <div className="font-space-grotesk font-bold text-electric-orange">
-              {unlockedBadges.length}
+              {actualUnlockedCount}
             </div>
             <div className="text-snow-white/70">Badges Earned</div>
           </div>
