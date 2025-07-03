@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Plus, Target, Calendar, TrendingUp, ArrowRight, Sparkles, Trophy } from 'lucide-react';
+import { Plus, Target, Calendar, TrendingUp, ArrowRight, Sparkles, Trophy, ChevronDown } from 'lucide-react';
 import GoalWizardModal from './GoalWizardModal';
 import MotivationalMicrocards from './MotivationalMicrocards';
 import GoalTimeline from './GoalTimeline';
@@ -34,6 +34,7 @@ export default function GoalManagementSection({
   const [showSimulatorCTA, setShowSimulatorCTA] = useState(false);
   const [showEncouragement, setShowEncouragement] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
 
   const currentAge = new Date().getFullYear() - birthDate.getFullYear();
   const completedGoals = goals.filter(g => g.is_completed).length;
@@ -198,6 +199,13 @@ export default function GoalManagementSection({
     { id: 'achievements', label: 'Achievements', icon: TrendingUp }
   ];
 
+  const activeTabData = tabs.find(tab => tab.id === activeTab);
+
+  const handleTabChange = (tabId: string) => {
+    setActiveTab(tabId as any);
+    setMobileDropdownOpen(false);
+  };
+
   if (loading) {
     return (
       <section className="py-20 px-6 bg-gradient-to-b from-dark-charcoal to-soft-purple-gray">
@@ -235,7 +243,7 @@ export default function GoalManagementSection({
             initial={{ opacity: 0, scale: 0.9, y: -20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: -20 }}
-            className="fixed top-24 left-1/2 transform -translate-x-1/2 z-50 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-6 shadow-2xl border border-green-400 max-w-md"
+            className="fixed top-24 left-1/2 transform -translate-x-1/2 z-50 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-6 shadow-2xl border border-green-400 max-w-md mx-4"
           >
             <div className="text-center space-y-3">
               <div className="text-4xl">🎉</div>
@@ -261,38 +269,38 @@ export default function GoalManagementSection({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="grid md:grid-cols-4 gap-6"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
         >
-          <div className="bg-gradient-to-br from-digital-teal/20 to-digital-teal/10 border border-digital-teal rounded-2xl p-6 text-center">
-            <Target className="h-8 w-8 text-digital-teal mx-auto mb-3" />
-            <div className="font-space-grotesk font-bold text-2xl text-snow-white">
+          <div className="bg-gradient-to-br from-digital-teal/20 to-digital-teal/10 border border-digital-teal rounded-2xl p-4 md:p-6 text-center">
+            <Target className="h-6 w-6 md:h-8 md:w-8 text-digital-teal mx-auto mb-2 md:mb-3" />
+            <div className="font-space-grotesk font-bold text-xl md:text-2xl text-snow-white">
               {goals.length}
             </div>
-            <div className="font-inter text-sm text-snow-white/80">Active Goals</div>
+            <div className="font-inter text-xs md:text-sm text-snow-white/80">Active Goals</div>
           </div>
 
-          <div className="bg-gradient-to-br from-warm-gold/20 to-warm-gold/10 border border-warm-gold rounded-2xl p-6 text-center">
-            <TrendingUp className="h-8 w-8 text-warm-gold mx-auto mb-3" />
-            <div className="font-space-grotesk font-bold text-2xl text-snow-white">
+          <div className="bg-gradient-to-br from-warm-gold/20 to-warm-gold/10 border border-warm-gold rounded-2xl p-4 md:p-6 text-center">
+            <TrendingUp className="h-6 w-6 md:h-8 md:w-8 text-warm-gold mx-auto mb-2 md:mb-3" />
+            <div className="font-space-grotesk font-bold text-xl md:text-2xl text-snow-white">
               {completedGoals}
             </div>
-            <div className="font-inter text-sm text-snow-white/80">Completed</div>
+            <div className="font-inter text-xs md:text-sm text-snow-white/80">Completed</div>
           </div>
 
-          <div className="bg-gradient-to-br from-electric-orange/20 to-electric-orange/10 border border-electric-orange rounded-2xl p-6 text-center">
-            <Calendar className="h-8 w-8 text-electric-orange mx-auto mb-3" />
-            <div className="font-space-grotesk font-bold text-2xl text-snow-white">
+          <div className="bg-gradient-to-br from-electric-orange/20 to-electric-orange/10 border border-electric-orange rounded-2xl p-4 md:p-6 text-center">
+            <Calendar className="h-6 w-6 md:h-8 md:w-8 text-electric-orange mx-auto mb-2 md:mb-3" />
+            <div className="font-space-grotesk font-bold text-xl md:text-2xl text-snow-white">
               {consciousYears.toFixed(1)}
             </div>
-            <div className="font-inter text-sm text-snow-white/80">Years Left</div>
+            <div className="font-inter text-xs md:text-sm text-snow-white/80">Years Left</div>
           </div>
 
-          <div className="bg-gradient-to-br from-green-500/20 to-green-500/10 border border-green-500 rounded-2xl p-6 text-center">
-            <div className="text-3xl mb-3">🎯</div>
-            <div className="font-space-grotesk font-bold text-2xl text-snow-white">
+          <div className="bg-gradient-to-br from-green-500/20 to-green-500/10 border border-green-500 rounded-2xl p-4 md:p-6 text-center">
+            <div className="text-2xl md:text-3xl mb-2 md:mb-3">🎯</div>
+            <div className="font-space-grotesk font-bold text-xl md:text-2xl text-snow-white">
               {goals.length > 0 ? Math.round((completedGoals / goals.length) * 100) : 0}%
             </div>
-            <div className="font-inter text-sm text-snow-white/80">Success Rate</div>
+            <div className="font-inter text-xs md:text-sm text-snow-white/80">Success Rate</div>
           </div>
         </motion.div>
 
@@ -306,39 +314,99 @@ export default function GoalManagementSection({
         >
           <Button
             onClick={() => setShowWizard(true)}
-            className={`text-lg px-8 py-4 ${goals.length === 0 ? 'animate-pulse-glow btn-primary' : 'btn-primary'}`}
+            className={`text-base md:text-lg px-6 md:px-8 py-3 md:py-4 ${goals.length === 0 ? 'animate-pulse-glow btn-primary' : 'btn-primary'}`}
           >
-            <Plus className="mr-2 h-5 w-5" />
+            <Plus className="mr-2 h-4 w-4 md:h-5 md:w-5" />
             {goals.length === 0 ? 'Create Your First Goal' : 'Create More Goals'}
           </Button>
         </motion.div>
 
-        {/* Tab Navigation */}
+        {/* Tab Navigation - Responsive */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className="flex justify-center"
+          className="w-full"
         >
-          <div className="bg-soft-purple-gray rounded-2xl p-2 flex space-x-2">
-            {tabs.map((tab) => {
-              const IconComponent = tab.icon;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id as any)}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-xl transition-all duration-200 ${
-                    activeTab === tab.id
-                      ? 'bg-electric-orange text-dark-charcoal'
-                      : 'text-snow-white hover:bg-dark-charcoal'
-                  }`}
+          {/* Desktop Tab Navigation */}
+          <div className="hidden md:flex justify-center">
+            <div className="bg-soft-purple-gray rounded-2xl p-2 flex space-x-2">
+              {tabs.map((tab) => {
+                const IconComponent = tab.icon;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => handleTabChange(tab.id)}
+                    className={`flex items-center space-x-2 px-6 py-3 rounded-xl transition-all duration-200 ${
+                      activeTab === tab.id
+                        ? 'bg-electric-orange text-dark-charcoal'
+                        : 'text-snow-white hover:bg-dark-charcoal'
+                    }`}
+                  >
+                    <IconComponent className="h-4 w-4" />
+                    <span className="font-space-grotesk font-semibold">{tab.label}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Mobile Tab Navigation - Dropdown */}
+          <div className="md:hidden">
+            <div className="relative">
+              <button
+                onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
+                className="w-full bg-soft-purple-gray rounded-2xl p-4 flex items-center justify-between text-snow-white"
+              >
+                <div className="flex items-center space-x-3">
+                  {activeTabData && (
+                    <>
+                      <activeTabData.icon className="h-5 w-5 text-electric-orange" />
+                      <span className="font-space-grotesk font-semibold text-lg">
+                        {activeTabData.label}
+                      </span>
+                    </>
+                  )}
+                </div>
+                <motion.div
+                  animate={{ rotate: mobileDropdownOpen ? 180 : 0 }}
+                  transition={{ duration: 0.2 }}
                 >
-                  <IconComponent className="h-4 w-4" />
-                  <span className="font-space-grotesk font-semibold">{tab.label}</span>
-                </button>
-              );
-            })}
+                  <ChevronDown className="h-5 w-5" />
+                </motion.div>
+              </button>
+
+              {/* Mobile Dropdown Menu */}
+              {mobileDropdownOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="absolute top-full left-0 right-0 mt-2 bg-soft-purple-gray rounded-2xl border border-snow-white/10 shadow-lg z-10"
+                >
+                  <div className="p-2 space-y-1">
+                    {tabs.map((tab) => {
+                      const IconComponent = tab.icon;
+                      return (
+                        <button
+                          key={tab.id}
+                          onClick={() => handleTabChange(tab.id)}
+                          className={`w-full flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-200 ${
+                            activeTab === tab.id
+                              ? 'bg-electric-orange text-dark-charcoal'
+                              : 'text-snow-white hover:bg-dark-charcoal'
+                          }`}
+                        >
+                          <IconComponent className="h-5 w-5" />
+                          <span className="font-space-grotesk font-semibold">{tab.label}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              )}
+            </div>
           </div>
         </motion.div>
 
@@ -390,21 +458,21 @@ export default function GoalManagementSection({
             transition={{ duration: 0.8 }}
             className="text-center space-y-6"
           >
-            <div className="bg-gradient-to-r from-electric-orange/20 to-warm-gold/20 rounded-3xl p-8 border border-electric-orange">
+            <div className="bg-gradient-to-r from-electric-orange/20 to-warm-gold/20 rounded-3xl p-6 md:p-8 border border-electric-orange">
               <div className="text-4xl mb-4">🔮</div>
-              <h3 className="font-space-grotesk font-bold text-2xl text-snow-white mb-4">
+              <h3 className="font-space-grotesk font-bold text-xl md:text-2xl text-snow-white mb-4">
                 Ready to Optimize Your Life?
               </h3>
-              <p className="font-inter text-lg text-snow-white/90 mb-6 max-w-2xl mx-auto">
+              <p className="font-inter text-base md:text-lg text-snow-white/90 mb-6 max-w-2xl mx-auto">
                 You've set your goals. Now discover how changing your daily habits could give you 
                 even more time to achieve them. Try our "What If?" simulator!
               </p>
               <Button
                 onClick={onComplete}
-                className="btn-primary text-lg px-8 py-4 animate-pulse-glow"
+                className="btn-primary text-base md:text-lg px-6 md:px-8 py-3 md:py-4 animate-pulse-glow"
               >
                 <span>Simulate Different Habits</span>
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
               </Button>
             </div>
           </motion.div>
