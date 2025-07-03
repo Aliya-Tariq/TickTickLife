@@ -51,6 +51,12 @@ function AppContent() {
           profile.birthDate = new Date(profile.birthDate);
         }
         setUserProfile(profile);
+      } else {
+        // For new users, ensure hasCompletedSetup is false
+        setUserProfile(prev => ({
+          ...prev,
+          hasCompletedSetup: false
+        }));
       }
     }
   }, [user]);
