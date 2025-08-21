@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { AuthProvider, useAuth } from '@/contexts/AuthContext';
-import LoginPage from '@/components/LoginPage';
+import LoginModal from '@/components/LoginModal';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import CalculatorSection from '@/components/CalculatorSection';
@@ -17,6 +17,7 @@ import { Toaster } from 'sonner';
 function AppContent() {
   const { user, loading } = useAuth();
   const [currentPage, setCurrentPage] = useState('home');
+  const [showLoginModal, setShowLoginModal] = useState(false);
   const [userProfile, setUserProfile] = useState({
     hasCompletedSetup: false,
     birthDate: null as Date | null,
@@ -80,11 +81,6 @@ function AppContent() {
     );
   }
 
-  // Show login page if user is not authenticated
-  if (!user) {
-    return <LoginPage />;
-  }
-
   const handlePageChange = (page: string) => {
     setCurrentPage(page);
     
@@ -98,6 +94,12 @@ function AppContent() {
   };
 
   const handleGetStarted = () => {
+    // If user is not logged in, show login modal
+    if (!user) {
+      setShowLoginModal(true);
+      return;
+    }
+
     if (userProfile.hasCompletedSetup) {
       // If user has completed setup, take them to goal management
       setCurrentPage('goal-management');
@@ -120,6 +122,12 @@ function AppContent() {
   };
 
   const handleCalculatorComplete = (birthDate: Date, lifespan: number, habits: any) => {
+    // If user is not logged in, show login modal
+    if (!user) {
+      setShowLoginModal(true);
+      return;
+    }
+
     const updatedProfile = {
       ...userProfile,
       birthDate,
@@ -274,6 +282,8 @@ function AppContent() {
         currentPage={currentPage} 
         onPageChange={handlePageChange}
         userHasCompletedSetup={userProfile.hasCompletedSetup}
+        onLoginClick={() => setShowLoginModal(true)}
+        user={user}
       />
       
       {/* Main content based on current page */}
@@ -283,13 +293,18 @@ function AppContent() {
             <HeroSection 
               onGetStarted={handleGetStarted}
               isReturningUser={userProfile.hasCompletedSetup}
+              user={user}
             />
           </div>
         )}
         
         {currentPage === 'calculator' && (
           <div id="calculator" className="pt-20">
-            <CalculatorSection onComplete={handleCalculatorComplete} />
+            <CalculatorSection 
+              onComplete={handleCalculatorComplete}
+              user={user}
+              onLoginRequired={() => setShowLoginModal(true)}
+            />
           </div>
         )}
         
@@ -347,7 +362,7 @@ function AppContent() {
         )}
 
         {/* Show setup prompt for new users who try to access features */}
-        {!userProfile.hasCompletedSetup && ['habit-analyzer', 'real-life-time', 'goal-management', 'what-if-simulator'].includes(currentPage) && (
+        {user && !userProfile.hasCompletedSetup && ['habit-analyzer', 'real-life-time', 'goal-management', 'what-if-simulator'].includes(currentPage) && (
           <div className="min-h-screen bg-dark-charcoal flex items-center justify-center px-6">
             <div className="max-w-2xl mx-auto text-center space-y-8">
               <div className="text-6xl mb-6">⏰</div>
@@ -367,10 +382,38 @@ function AppContent() {
             </div>
           </div>
         )}
+
+        {/* Show login requirement for non-authenticated users trying to access features */}
+        {!user && ['habit-analyzer', 'real-life-time', 'goal-management', 'what-if-simulator'].includes(currentPage) && (
+          <div className="min-h-screen bg-dark-charcoal flex items-center justify-center px-6">
+            <div className="max-w-2xl mx-auto text-center space-y-8">
+              <div className="text-6xl mb-6">🔐</div>
+              <h2 className="font-space-grotesk font-bold text-3xl text-snow-white">
+                Login Required
+              </h2>
+              <p className="font-inter text-lg text-snow-white/80">
+                To access this feature, please log in or create an account. 
+                Your data will be saved securely and you can continue your journey anytime.
+              </p>
+              <button
+                onClick={() => setShowLoginModal(true)}
+                className="btn-primary text-lg px-8 py-4"
+              >
+                Login / Sign Up
+              </button>
+            </div>
+          </div>
+        )}
       </div>
       
       {/* TickBot - Always visible */}
       <TickBot userProfile={tickBotProfile} />
+      
+      {/* Login Modal */}
+      <LoginModal 
+        isOpen={showLoginModal} 
+        onClose={() => setShowLoginModal(false)} 
+      />
       
       <Toaster position="top-right" />
     </div>

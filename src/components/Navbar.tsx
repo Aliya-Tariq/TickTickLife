@@ -3,12 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Home, Zap, Info, Mail, ChevronDown, LogOut, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import ClockLogo from './ClockLogo';
-import { useAuth } from '@/contexts/AuthContext';
+import { User as UserType } from '@supabase/supabase-js';
 
 interface NavbarProps {
   currentPage?: string;
   onPageChange?: (page: string) => void;
   userHasCompletedSetup?: boolean;
+  onLoginClick?: () => void;
+  user?: UserType | null;
 }
 
 const navigationItems = [
@@ -31,8 +33,14 @@ const navigationItems = [
   { id: 'contact', label: 'Contact', icon: Mail, href: '#contact' }
 ];
 
-export default function Navbar({ currentPage = 'home', onPageChange, userHasCompletedSetup = false }: NavbarProps) {
-  const { user, signOut } = useAuth();
+export default function Navbar({ 
+  currentPage = 'home', 
+  onPageChange, 
+  userHasCompletedSetup = false,
+  onLoginClick,
+  user
+}: NavbarProps) {
+  const { signOut } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -343,7 +351,7 @@ export default function Navbar({ currentPage = 'home', onPageChange, userHasComp
               })}
 
               {/* User Menu */}
-              {user && (
+              {user ? (
                 <div className="relative ml-4">
                   <motion.button
                     onClick={() => setUserDropdownOpen(!userDropdownOpen)}
@@ -400,6 +408,13 @@ export default function Navbar({ currentPage = 'home', onPageChange, userHasComp
                     )}
                   </AnimatePresence>
                 </div>
+              ) : (
+                <Button
+                  onClick={onLoginClick}
+                  className="ml-4 btn-primary"
+                >
+                  Login
+                </Button>
               )}
             </div>
 
@@ -587,7 +602,7 @@ export default function Navbar({ currentPage = 'home', onPageChange, userHasComp
                   })}
 
                   {/* Mobile User Menu */}
-                  {user && (
+                  {user ? (
                     <div className="border-t border-snow-white/10 pt-4 mt-4">
                       <div className="px-4 py-2 text-sm text-snow-white/70">
                         {user.email}
@@ -598,6 +613,16 @@ export default function Navbar({ currentPage = 'home', onPageChange, userHasComp
                       >
                         <LogOut className="h-5 w-5" />
                         <span>Sign Out</span>
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="border-t border-snow-white/10 pt-4 mt-4">
+                      <button
+                        onClick={onLoginClick}
+                        className="w-full flex items-center justify-center space-x-3 px-4 py-3 rounded-xl font-inter font-medium text-base transition-all duration-200 bg-electric-orange text-dark-charcoal hover:bg-electric-orange/90"
+                      >
+                        <User className="h-5 w-5" />
+                        <span>Login / Sign Up</span>
                       </button>
                     </div>
                   )}

@@ -254,13 +254,9 @@ export default function GamifiedGoalTracking({ goals, completedGoals }: Gamified
   // Check for badge unlocks with proper validation
   useEffect(() => {
     const checkBadges = () => {
-      const newUnlocked: string[] = [];
+      const currentlyUnlocked: string[] = [];
 
       badges.forEach(badge => {
-        // Skip if already unlocked
-        if (unlockedBadges.includes(badge.id)) {
-          return;
-        }
 
         let shouldUnlock = false;
 
@@ -310,26 +306,25 @@ export default function GamifiedGoalTracking({ goals, completedGoals }: Gamified
         }
 
         if (shouldUnlock) {
-          newUnlocked.push(badge.id);
+          currentlyUnlocked.push(badge.id);
         }
       });
 
-      if (newUnlocked.length > 0) {
-        setUnlockedBadges(prev => {
-          const updated = [...prev, ...newUnlocked];
-          // Show notification for the first newly unlocked badge
-          if (newUnlocked.length > 0) {
-            setNewlyUnlockedBadge(newUnlocked[0]);
-            // Clear the notification after 4 seconds
-            setTimeout(() => setNewlyUnlockedBadge(null), 4000);
-          }
-          return updated;
-        });
+      // Find newly unlocked badges
+      const newlyUnlocked = currentlyUnlocked.filter(badgeId => !unlockedBadges.includes(badgeId));
+      
+      // Update unlocked badges to match current state
+      setUnlockedBadges(currentlyUnlocked);
+      
+      // Show notification for newly unlocked badge
+      if (newlyUnlocked.length > 0) {
+        setNewlyUnlockedBadge(newlyUnlocked[0]);
+        setTimeout(() => setNewlyUnlockedBadge(null), 4000);
       }
     };
 
     checkBadges();
-  }, [goals.length, completedGoals, unlockedBadges, userStats]);
+  }, [goals.length, completedGoals, userStats]);
 
   const currentLevelData = levels.find(l => l.level === currentLevel) || levels[0];
   const nextLevelData = levels.find(l => l.level === currentLevel + 1);
