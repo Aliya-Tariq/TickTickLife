@@ -7,15 +7,12 @@ import HabitInput from './HabitInput';
 import CountdownDisplay from './CountdownDisplay';
 import { Button } from '@/components/ui/button';
 import { Calculator, ArrowRight } from 'lucide-react';
-import { User } from '@supabase/supabase-js';
 
 interface CalculatorSectionProps {
   onComplete?: (birthDate: Date, lifespan: number, habits: any) => void;
-  user?: User | null;
-  onLoginRequired?: () => void;
 }
 
-export default function CalculatorSection({ onComplete, user, onLoginRequired }: CalculatorSectionProps) {
+export default function CalculatorSection({ onComplete }: CalculatorSectionProps) {
   const [birthDate, setBirthDate] = useState<Date | undefined>();
   const [lifespan, setLifespan] = useState(80);
   const [habits, setHabits] = useState({
@@ -43,11 +40,6 @@ export default function CalculatorSection({ onComplete, user, onLoginRequired }:
   };
 
   const handleContinue = () => {
-    if (!user && onLoginRequired) {
-      onLoginRequired();
-      return;
-    }
-    
     if (onComplete && birthDate) {
       onComplete(birthDate, lifespan, habits);
     }
@@ -163,9 +155,8 @@ export default function CalculatorSection({ onComplete, user, onLoginRequired }:
                   <Button
                     onClick={handleContinue}
                     className="w-full btn-primary py-4 text-lg"
-                    disabled={!birthDate}
                   >
-                    <span>{user ? 'Analyze My Habits Deeper' : 'Login to Continue Journey'}</span>
+                    <span>Analyze My Habits Deeper</span>
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </motion.div>
