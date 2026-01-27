@@ -9,7 +9,7 @@
 
 <br>
 
-**TickTick Life** is part productivity tool, part psychology experiment, and part wake-up call. It calculates your estimated remaining lifespan—then shows you how much of it you’ll lose to daily habits like scrolling, sleeping, working, and... existing.
+**TickTick Life** is part productivity tool, part psychology experiment, and part wake-up call. It calculates your estimated remaining lifespan,then shows you how much of it you’ll lose to daily habits like scrolling, sleeping, working, and... existing.
 
 [![Live Demo](https://img.shields.io/badge/🌟_Live_Demo-Try_Now-18C3B9?style=for-the-badge)](https://effortless-dragon-41a868.netlify.app/)
 [![GitHub Stars](https://img.shields.io/github/stars/Aliya-Tariq/tickticklife?style=for-the-badge&color=FFD369)](https://github.com/Aliya-Tariq/TickTickLife)
@@ -36,7 +36,7 @@ Every second you're reading this, your life clock is ticking. But here's the sho
 
 ## 💡 What is TickTickLife?
 
-TickTickLife isn't just another productivity app. It's a **life awareness revolution** that shows you the brutal reality of how your daily habits are stealing your precious time—and more importantly, how to reclaim it.
+TickTickLife isn't just another productivity app. It's a **life awareness revolution** that shows you the brutal reality of how your daily habits are stealing your precious time and more importantly, how to reclaim it.
 
 ### 🎯 Your Journey to Time Awareness
 
@@ -55,18 +55,18 @@ TickTickLife isn't just another productivity app. It's a **life awareness revolu
 
 ##  Why TickTickLife Will Change Your Life
 
-### 😱 The Shock Factor
+###  The Shock Factor
 - **Real-time countdown** of your remaining life seconds
 - **Brutal honesty** about where your time actually goes
 - **Visual impact** that makes time loss tangible and scary
 
-### 🎯 The Transformation
+###  The Transformation
 - **Reclaim 2-5 years** of conscious living time
 - **Optimize daily habits** with scientific precision
 - **Set meaningful goals** that actually matter
 - **Live with intention** instead of autopilot
 
-### 🧠 The Awareness
+###  The Awareness
 - **Gamified progress tracking** with achievements and badges
 - **Emotional impact meter** showing how changes make you feel
 - **AI-powered insights** for personalized optimization
@@ -131,7 +131,7 @@ TickTickLife isn't just another productivity app. It's a **life awareness revolu
 
 ---
 
-## 🚀 Quick Start - Transform Your Life in 5 Minutes
+##  Quick Start - Transform Your Life in 5 Minutes
 
 ```bash
 # Clone the repository
