@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Home, Zap, Info, Mail, ChevronDown, LogOut, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import ClockLogo from './ClockLogo';
+import { useAuth } from '@/contexts/AuthContext';
+import { Button } from '@/components/ui/button';
 import { User as UserType } from '@supabase/supabase-js';
 
 interface NavbarProps {
